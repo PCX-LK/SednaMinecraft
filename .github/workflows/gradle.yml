@@ -3,7 +3,11 @@
 
 name: build
 
-on: [pull_request, push， workflow_dispatch]
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
 
 jobs:
   build:
